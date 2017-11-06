@@ -17,23 +17,20 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <img src={logo} align="left" className="App-logo" alt="logo" />
+            <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">TRACK MY BUDGET</h1>
-            {/* <li className="App-nav"> */}
-              <NavBar className="App-nav" />
-            {/* </li> */}
+            <NavBar />
           </header>
-          <body className="App-body">
-            <p className="App-intro">
-              <Route exact path='/' component={BudgetAbout}/>
-              <Route path='/about' component={BudgetAbout}/>
-            </p>
-          <Route exact path='/budget' component={BudgetPage}/>
-          <Route path='/budget/expenses' component={ExpensesPage}/>
-          <Route path='/budget/expenses/new' component={ExpensesNew}/>
-          {/* <Route path='budget/income' component={IncomePage}/> */}
-
-        </body>
+          <p className="App-intro">
+            <Route className="App-intro" exact path='/' component={BudgetAbout}/>
+            <Route className="App-intro" path='/about' component={BudgetAbout}/>
+          </p>
+          <p className="App-body">
+            <Route exact path='/budget' component={BudgetPage}/>
+            <Route path='/budget/expenses' component={ExpensesPage}/>
+            <Route path='/budget/expenses/new' component={ExpensesNew}/>
+            {/* <Route path='budget/income' component={IncomePage}/> */}
+          </p>
         </div>
       </Router>
     );

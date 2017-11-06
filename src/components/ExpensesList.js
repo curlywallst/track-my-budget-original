@@ -39,6 +39,7 @@ const ExpensesList = ({ expenses }) => {
     <div>
       <ReactTable
         data={renderExpenses}
+        noDataText="No Expenses Entered"
         columns={columns}
         defaultSorted={[
             {
