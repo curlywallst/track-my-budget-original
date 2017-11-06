@@ -23,8 +23,9 @@ class ExpensesNew extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    const { addExpenses, history } = this.props;
-    const expense = Object.assign({}, this.state, { id: uuid()});
+    const { addExpenses } = this.props;
+    const annualAmount = this.state.monthlyAmount * 12
+    const expense = Object.assign({}, this.state, { annualAmount: annualAmount, id: uuid()});
     addExpenses(expense);
     this.setState({
       name: '',
@@ -32,7 +33,6 @@ class ExpensesNew extends Component {
       monthlyAmount: '',
       annualAmount: '',
     });
-    // history.push('/budget/expenses')
   }
 
   render() {

@@ -22,10 +22,9 @@ class ExpensesPage extends Component {
           {/* <Route path={`${match.url}/:expenseId`} component={ExpensesShow}/> */}
           <Route exact path={match.url} render={() => (
             <div>
+              <ExpensesNew />
               <h2>Expenses</h2>
               <ExpensesList expenses={expenses} />
-              <ExpensesNew />
-              <p>Please Click Budget to go to Budget Page</p>
             </div>
           )}/>
         </Switch>

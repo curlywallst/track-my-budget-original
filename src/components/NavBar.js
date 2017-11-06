@@ -10,7 +10,8 @@ const NavBar = props => {
         style={{
           display: 'inline-block',
           textAlign: 'right',
-          marginLeft: '500px'
+          marginLeft: '500px',
+          textDecoration: 'none'
         }}
         activeStyle={{ color: '#86B404' }}
         to="/about"
@@ -24,6 +25,7 @@ const NavBar = props => {
         style={{
           display: 'inline-block',
           textAlign: 'right',
+          textDecoration: 'none'
         }}
         activeStyle={{ color: '#86B404' }}
         to="/budget"
@@ -36,6 +38,7 @@ const NavBar = props => {
         style={{
           display: 'inline-block',
           textAlign: 'right',
+          textDecoration: 'none'
         }}
         activeStyle={{ color: '#86B404' }}
         to="/budget/expenses"
@@ -48,6 +51,7 @@ const NavBar = props => {
         style={{
           display: 'inline-block',
           textAlign: 'right',
+          textDecoration: 'none'
         }}
         activeStyle={{ color: '#86B404' }}
         to="/budget/income"
@@ -60,6 +64,7 @@ const NavBar = props => {
           style={{
             display: 'inline-block',
             textAlign: 'right',
+            textDecoration: 'none'
           }}
           activeStyle={{ color: '#86B404' }}
           to="/budget/edit"
