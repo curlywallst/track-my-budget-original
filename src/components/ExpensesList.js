@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactTable from 'react-table'
+import _ from "lodash";
 
+
+
+const ExpensesList = ({ expenses }) => {
+  const renderExpenses = expenses
+  renderExpenses.map(expense =>
+        expense.name = <Link key={expense.id} to={`/expenses/${expense.id}`}>{expense.name}</Link>
+      );
   const columns = [{
     Header: 'Name',
     accessor: 'name' // String-based value accessors!
@@ -11,16 +19,22 @@ import ReactTable from 'react-table'
   }, {
     Header: 'Monthly Amount',
     accessor: 'monthlyAmount',
+    Footer: (
+              <span>
+                <strong>Total:</strong>{" "}
+                {_.sum(_.map(renderExpenses, d => parseInt(d.monthlyAmount)))}
+              </span>
+              )
   }, {
     Header: 'Annual Amount',
     accessor: 'annualAmount',
+    Footer: (
+              <span>
+                <strong>Total:</strong>{" "}
+                {_.sum(_.map(renderExpenses, d => d.annualAmount))}
+              </span>
+              )
   }]
-
-const ExpensesList = ({ expenses }) => {
-  const renderExpenses = expenses
-  renderExpenses.map(expense =>
-  expense.name = <Link key={expense.id} to={`/expenses/${expense.id}`}>{expense.name}</Link>
-);
   return (
     <div>
       <ReactTable
