@@ -23,6 +23,14 @@ const ExpensesList = ({ expenses }) => {
       <ReactTable
         data={expenses}
         columns={columns}
+        defaultSorted={[
+            {
+              id: "category",
+              desc: true
+            }
+          ]}
+        defaultPageSize={10}
+        className="-striped -highlight"
       />
     </div>
   );

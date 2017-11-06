@@ -60,7 +60,7 @@ class ExpensesNew extends Component {
             placeholder="Monthly Amount"
             value={this.state.monthlyAmount}/>
 
-          <input type="submit" value="Add Expense" />
+          <input style={{background: '#86B404'}} type="submit" value="Add Expense" />
         </form>
       </div>
     );
