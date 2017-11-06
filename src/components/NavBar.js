@@ -69,7 +69,7 @@ const NavBar = props => {
           activeStyle={{ color: '#86B404' }}
           to="/budget/edit"
         >
-          Setup
+          Settings
         </NavLink>
 
     </div>
