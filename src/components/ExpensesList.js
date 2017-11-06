@@ -17,11 +17,14 @@ import ReactTable from 'react-table'
   }]
 
 const ExpensesList = ({ expenses }) => {
-
+  const renderExpenses = expenses
+  renderExpenses.map(expense =>
+  expense.name = <Link key={expense.id} to={`/expenses/${expense.id}`}>{expense.name}</Link>
+);
   return (
     <div>
       <ReactTable
-        data={expenses}
+        data={renderExpenses}
         columns={columns}
         defaultSorted={[
             {
